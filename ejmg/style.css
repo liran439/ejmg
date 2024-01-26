@@ -1,0 +1,140 @@
+body {background-color: blueviolet;}
+* {
+
+    text-align: center;
+    
+    }
+    
+    /*Alternative CSS Centering Code with the "body" Selector*/
+    
+    body {
+    
+    text-align: center;
+    
+    }
+    
+    /* Styling */
+    
+    body {
+      margin: auto;
+      width: 640px; 
+      padding: 50px;
+      font-family: 'Lexend Deca', sans-serif; 
+      color: blueviolet;    
+    }
+    body {
+        min-height: 100vh;
+        min-width: 100vh;
+        background-color: #12181f;
+        color: white;
+      }
+      
+      h1 {
+          text-align: center;
+          font-weight: 700;
+          font-size: 50px;
+      }
+      
+      h4 {
+          text-align: center;
+          font-size: 30px;
+          font-weight: bold;
+      }
+      
+      #cards-grid {
+        display: grid;
+        justify-content: center;
+        grid-gap: 16px;
+        grid-template-columns: repeat(6, 140px);
+        grid-template-rows: repeat(2, 210px);
+      }
+      
+      
+      
+      #actions {
+          display: flex;
+          justify-content: center;
+      }
+      
+      #actions button {
+        text-align: center;
+          padding: 8px 16px;
+          font-size: 30px;
+          border-radius: 10px;
+          background-color: #df0000;
+          color: white;
+      }
+      .cards {
+        display: grid;
+        justify-content: center;
+        grid-gap: 16px;
+        grid-template-columns: repeat(6, 140px);
+        grid-template-rows: repeat(2, 210px);
+      }
+    .card {
+        height: 210px;
+        width: 140px;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease-in-out;
+    }
+      
+    .front-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card.flipped {
+        transform: rotateY(180deg);
+    }
+    
+    .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .card .front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card .back {
+        background-image: url("bg.png");
+        background-position: center center;
+        background-size: cover;
+        backface-visibility: hidden;
+    }
+    
+    .card .front {
+        transform: rotateY(180deg);
+    }
+    @media (max-width: 1000px) {
+        /* Adjust font sizes */
+        h1 {
+          font-size: 36px;
+        }
+        #cards-grid {
+          grid-template-columns: repeat(3, 140px);
+          grid-template-rows: repeat(4, 210px);
+          grid-gap: 10px;
+        }
+      
+        .card {
+          height: 210px;
+          width: 140px;
+        }
+      
+        /* Adjust padding and font size for the restart button */
+        .actions button {
+          padding: 10px 20px;
+          font-size: 24px;
+        }
+    }
